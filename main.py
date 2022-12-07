@@ -79,7 +79,7 @@ def tegn(delta_tid):
     x1, y1 = cirkel(tegn.tid, (x , y), -300, -0.3, 0)
     arcade.draw_circle_filled(x1, y1, 5, arcade.csscolor.WHITE)
     if len(tegn.track) == CIRKEL:
-        tegn.track.pop(CIRKEL)
+        tegn.track.fjern(CIRKEL)
     for punkt in tegn.track:
         arcade.draw_circle_filled(*punkt, 2, arcade.csscolor.WHITE)
     tegn.tid += delta_tid
